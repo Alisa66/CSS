@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            margin:0 auto
+        }
+        .child{
+            height: 50px;
+            background-color: #2266cc; 
+        }
+        /* 第一种 知道儿子盒子的宽度 */
+        .child.c1{  
+            width: 50px;
+            margin: 0 auto;
+        }
+        /* 第二种 width宽度不固定 */
+        .parent.p2 {
+            text-align: center;
+        }
+        .child.c2{
+            width: 20%;
+            display: inline-block;
+        }
+        /* 第三种 width宽度不固定 */
+        .between{
+            position: relative;
+            left: 50%;
+            float: left;
+        }
+        .child.c3{
+            width:120px;
+            position: relative;
+            right: 50%;
+        }
+
+        .parent.p4{
+            position: relative;
+        }
+        .between4{
+            position:absolute;
+            left: 50%;
+        }
+        .child.c4{
+            width:112px;
+            position: relative;
+            right: 50%;
+        }
+        .parent.p5{
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-orient: horizontal;
+        }
+        .child.c5{
+            width:32px
+        }
+        .between6{
+           width: fit-content;
+           margin: 0 auto;
+        }
+        .child.c6{
+            width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+      <h1>水平居中的六种方式</h1>
+    </div>
+  
+    <div class="parent">
+        <div class="child c1">
+            <h2>1</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="parent p2">
+        <div class="child c2">
+            <h2>2</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="parent">
+        <div class="between">
+              <div class="child c3"><h2>3</h2></div>
+        </div>
+    </div>
+    <hr>
+    <div class="parent p4">
+        <div class="between4">
+              <div class="child c4"><h2>4</h2></div>
+        </div>
+    </div>
+    <hr>
+    <div class="parent p5">
+              <div class="child c5"><h2>5</h2></div>   
+    </div>
+    <hr>
+    <div class="parent">
+        <div class="between6">
+            <div class="child c6"></div>
+        </div>
+    </div>
+</body>
+</html>

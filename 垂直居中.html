@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 200px;
+            width: 200px;
+             float: left;
+            background-color: #ddd;
+            margin-right: 50px;
+        }
+        .child{
+                height: 50px;
+                background-color:#53d;
+        }
+        .parent.p1{
+            position:relative;
+        }
+        .child.c1{
+            position:absolute;
+            margin: 75px 0;
+            width: 30px;
+        }
+        /* postion+teransform */
+        .child.c2{
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            transform: translate(0%,-50%);
+            /* -号表示反方向
+            两个长度值或百分比表示在二维上分别按照指定X轴和Y轴的值进行的平移。
+            等同于translate() （2D 平移）函数指定两个值。
+             */
+        }
+        /* flex布局 */
+        .parent.p3{
+            display: flex;
+            align-items: center;
+        }
+        .child.c3{
+            width: 50px;
+        }
+        /* table-cell布局 */
+   .parent.p4{
+       display: table;
+   }
+   .between{
+       display: table-cell;
+       vertical-align: middle;
+   }
+   .child.c4{
+       width: 60px;
+   }
+
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+    <h2>竖直居中</h2>
+    </div>
+    <div class="parent p1"> 
+        <div class="child c1">
+            <h2>1</h2>
+        </div>
+    </div>
+    <div class="parent p1">
+        <div class="child c2"></div>
+    </div>
+    <div class="parent p3">
+        <div class="child c3"></div>
+    </div>
+    <div class="parent p4">
+        <div class="between">
+                <div class="child c4"></div>
+        </div>
+    
+    </div>
+</body>
+</html>

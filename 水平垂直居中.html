@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #aaa;
+            float: left;
+            margin: 40px;
+        }
+        .child{
+            height: 60px;
+            background-color: #265415;
+        }
+         .parent.p1{
+             position: relative;
+         }   
+         .child.c1{
+             width: 60px;
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%,-50%);
+         }
+         .parent.p2{
+              position: relative;  
+         }
+         .child.c2{
+             position: absolute;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             margin: auto;
+             width: 30px;
+         }
+         .parent.p3{
+                     position: relative;
+         }
+         .child.c3{
+             position: absolute;
+             top:50%;
+             left:50%;
+             /* 自身height的一半 */
+             margin-top: -30px;  
+              /* 自身width的一半 */
+             margin-left: -30px;
+             width: 60px;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="parent p1">
+        <div class="child c1"><h2>1</h2></div>
+    </div>
+    <div class="parent p2">
+        <div class="child c2"><h2>2</h2></div>
+    </div>
+    <div class="parent p3">
+        <div class="child c3"><h2>3</h2></div>
+    </div>
+</body>
+</html>
